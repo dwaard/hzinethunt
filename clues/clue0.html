@@ -1,0 +1,44 @@
+<script src="google-code-prettify/run_prettify.js"></script>
+<h1>Lees de code</h1>
+<pre class="prettyprint">
+package introweek;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		/* construction of the key */
+		String key = "nerd";
+		key = key.replace('d', 't');
+		key = 'd' + key;
+		StringBuilder bob = new StringBuilder(key);		//Use Bob the Builder! :-P
+		bob.reverse();
+		key = bob.toString();
+		/* end of key construction*/
+
+		/* construction of the value */
+		String value = "";
+		char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
+						   'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+						   's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+		int i = 1;
+		value = value + alphabet[i++];
+		value = value + alphabet[i*i*i];
+		value = value + alphabet[i*i*i-2];
+		value = value + "Data";
+		/* end of value construction */
+
+		System.out.println(key + " = " + value + ' ');
+		
+		//printHints();
+	}
+	
+	private static void printHints(){
+		System.out.println("HINTS:");
+		System.out.println("Een string is een stukje tekst, bijvoorbeeld: \"hallo wereld\"");
+		System.out.println("Bob is een truc om gemakkelijke bepaalde dingen met strings te doen. Zoals bijv. omdraaien.");
+		System.out.println("i++ gebruikt de waarde van i waarna i met 1 wordt opgehoogd");
+		System.out.println("* betekent vermenigvuldigen");
+	}
+}
+</pre>
